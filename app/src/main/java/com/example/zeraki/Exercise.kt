@@ -18,7 +18,7 @@ class Exercise : AppCompatActivity() {
     private lateinit var exercise_color: TextView
     private lateinit var error: TextView
     private lateinit var answer: EditText
-
+    private var position =0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
@@ -34,13 +34,14 @@ class Exercise : AppCompatActivity() {
         startActivity(Intent(this,MainActivity::class.java))
         }
         submit.setOnClickListener {
-            ++position
             if (!answer.text.isEmpty()){
                 if (answer.text.toString().uppercase().equals(ColorData.color_names[position])){
                     //playmedia
                         playMedia()
                     //increament the position
                     Toast.makeText(this,"Successful",Toast.LENGTH_SHORT).show()
+                    answer.text.clear()
+                    position++
                     shownext()
                 }else{
                     error.visibility = View.VISIBLE
@@ -57,6 +58,7 @@ class Exercise : AppCompatActivity() {
             exercise_color.setBackgroundResource(ColorData.colors[position])
         }else{
             position=0
+            exercise_color.setBackgroundResource(ColorData.colors[position])
         }
 
     }

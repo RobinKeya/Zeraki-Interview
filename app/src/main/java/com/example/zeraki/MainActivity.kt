@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-public var position = 0
+
 class MainActivity : AppCompatActivity() {
-    public var position = 0
+    private var position = 0
     private lateinit var color: TextView
     private lateinit var colorName: TextView
     private lateinit var btnStart: Button
