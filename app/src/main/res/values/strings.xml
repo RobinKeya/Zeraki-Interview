@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Zeraki</string>
+    <string name="lessons">Color Lessons</string>
+    <string name="start">Start</string>
+    <string name="textview">TextView</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="exercise">Exercise</string>
+    <string name="color_exercise">Color Exercise</string>
+</resources>
